@@ -3,8 +3,8 @@
 
 def numeros(a,b)
 (a..b).each {|i| puts i if i.even?}
-	
+(b..a).each {|i| puts i if i.even?}	
 end
 
-numeros(0,6)
+numeros(6,0)
 

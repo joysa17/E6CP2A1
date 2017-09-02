@@ -4,13 +4,19 @@
 # <div class='product'><p> Producto3 </p><p> Precio: 1500 </p></div>
 # <div class='product'><p> Producto4 </p><p> Precio: 950 </p></div>
 
-products = %w(Producto1 Producto2 Producto3 Producto4)
-prices = %w[1000 2000 1500 950]
+
+products = [["Producto1", 1000],["Producto2", 2000], ["Producto3", 1500], ["Producto4",950]]
+products.to_h
 
 html = ''
-products.each do |i|
+products.each do |key, value| 
   html += "<div class='product'>"
+  html += "<p>#{key}</p>"
+  html += "<p>Precio: #{value}</p>"
   html += "</div>\n"
 end
 
 puts html
+
+
+ 

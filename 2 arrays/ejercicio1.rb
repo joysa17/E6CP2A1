@@ -1,10 +1,18 @@
 # Dado el array:
+arreglo = [1, 2, 3, 9, 1, 4, 5, 2, 3, 6, 6]
 # 1. Mostrar en pantalla el primer elemento.
-# 2. Mostrar en pantalla el último elemento.
+print arreglo[0]
+puts "\n"
+# 2. Mostrar en pantalla el ultimo elemento.
+print arreglo[10]
+puts "\n"
 # 3. Mostrar en pantalla todos los elementos.
-# 4. Mostrar en pantalla todos los elementos junto con un índice.
-# 5. Mostrar en pantalla todos los elementos que se encuentren en una posición par.
+print arreglo
+puts "\n"
+# 4. Mostrar en pantalla todos los elementos junto con un indice.
 
-arreglo = [1,2,3,9,1,4,5,2,3,6,6]
+arreglo.each_with_index{|ele, i| puts "indice: #{i} elemento:#{ele}" }
 
-puts
+# 5. Mostrar en pantalla todos los elementos que se encuentren en una posicion par.
+ 
+arreglo.each_with_index{|ele, i| puts "indice: #{i} elemento:#{ele}" if i.even?}
